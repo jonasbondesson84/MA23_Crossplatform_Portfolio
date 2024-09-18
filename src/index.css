@@ -101,7 +101,7 @@ button:focus-visible {
   color:#f2f2f2;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #c54a07;
 }
 
 .underline {
@@ -118,6 +118,15 @@ button:focus-visible {
   
 }
 .skills {
+  
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.skill-tree {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
@@ -130,8 +139,43 @@ button:focus-visible {
   display: flex;
   margin: 10px;
   align-items: center;
+  transition: transform 0.3s ease;
 }
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
 .logo {
   max-height: 100px;
   
 }
+
+.selected-skill {
+  background-color: #f9f9f9; /* Ljus bakgrundsfärg */
+  border-radius: 12px; /* Rundade hörn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
+  padding: 20px; /* Ger lite utrymme inuti rutan */
+  max-width: 300px; /* Begränsar bredden */
+  margin: 20px auto; /* Centrerar på sidan med lite utrymme runt */
+  text-align: center; /* Centrerar innehållet */
+  transition: transform 0.3s ease; /* Smidig transformeringseffekt vid hover */
+}
+
+.selected-skill:hover {
+  transform: scale(1.05); /* Gör kortet lite större vid hover */
+}
+
+#title {
+  font-size: 24px; /* Stor rubrik */
+  font-weight: bold; /* Fetstil för rubriken */
+  color: #333; /* Mörk textfärg */
+  margin-bottom: 10px;
+}
+
+.desc, .experience {
+  font-size: 16px; /* Lagom storlek för beskrivningstext */
+  color: #555; /* Mildare textfärg för beskrivningar */
+  margin-bottom: 8px;
+}
+
